@@ -5,11 +5,11 @@ import {
   Organization,
   Person,
   GeoShape,
-  PaymentMethod,
   QuantitativeValue,
 } from "schema-dts";
 import { IdReference, SchemaValue } from "./shared";
 import { PriceSpecification } from "./PriceSpecification";
+import { LigoPaymentMethod } from "./LigoPaymentMethod";
 
 export interface Offer {
   /** Description of the offer. */
@@ -25,7 +25,10 @@ export interface Offer {
   /** Available prices of an offer. */
   priceSpecification?: SchemaValue<PriceSpecification, "priceSpecification">;
   /** The payment method(s) accepted by seller for this offer. */
-  acceptedPaymentMethod?: SchemaValue<PaymentMethod, "acceptedPaymentMethod">;
+  acceptedPaymentMethod?: SchemaValue<
+    LigoPaymentMethod,
+    "acceptedPaymentMethod"
+  >;
   /** The amount of time that is required between accepting the offer and the actual usage of the resource or service. */
   advanceBookingRequirement?: SchemaValue<
     QuantitativeValue,
