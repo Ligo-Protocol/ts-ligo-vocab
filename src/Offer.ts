@@ -1,5 +1,4 @@
 import {
-  Role,
   Text,
   URL,
   Vehicle,
@@ -10,11 +9,7 @@ import {
   PaymentMethod,
   QuantitativeValue,
 } from "schema-dts";
-
-declare type SchemaValue<T, TProperty extends string> =
-  | T
-  | Role<T, TProperty>
-  | readonly (T | Role<T, TProperty>)[];
+import { IdReference, SchemaValue } from "./shared";
 
 export interface Offer {
   /** Description of the offer. */
@@ -22,9 +17,9 @@ export interface Offer {
   /** Image(s) of specific vehicle being offered. */
   image?: SchemaValue<URL, "image">;
   /** The vehicle being offered. */
-  itemOffered?: SchemaValue<Vehicle, "itemOffered">;
+  itemOffered?: SchemaValue<Vehicle | IdReference, "itemOffered">;
   /** The entity offering the rental. */
-  seller?: SchemaValue<Organization | Person, "seller">;
+  seller?: SchemaValue<Organization | Person | IdReference, "seller">;
   /** The approximate area where the vehicle is available to pickup. Can be used to obfuscate the precise location. */
   areaServed?: SchemaValue<GeoShape, "areaServed">;
   /** Available prices of an offer. */
@@ -36,4 +31,6 @@ export interface Offer {
     QuantitativeValue,
     "advanceBookingRequirement"
   >;
+  /** The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. */
+  eligibleQuantity?: SchemaValue<QuantitativeValue, "eligibleQuantity">;
 }
