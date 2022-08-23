@@ -5,11 +5,11 @@ import {
   Organization,
   Person,
   GeoShape,
-  PriceSpecification,
   PaymentMethod,
   QuantitativeValue,
 } from "schema-dts";
 import { IdReference, SchemaValue } from "./shared";
+import { PriceSpecification } from "./PriceSpecification";
 
 export interface Offer {
   /** Description of the offer. */
