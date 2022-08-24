@@ -9,3 +9,7 @@ export declare type SchemaValue<T, TProperty extends string> =
   | T
   | Role<T, TProperty>
   | readonly (T | Role<T, TProperty>)[];
+
+export declare type WithContext<T> = T & {
+  "@context": "https://schema.org";
+};
