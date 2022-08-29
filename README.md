@@ -63,9 +63,3 @@ const doc = await TileDocument.create(ceramic, offer, {
   schema: "k2t6wyfsu4pg1jk6ce2pktx68g9pdir43moy0xppwtk5dg577ke38zdu48iynt",
 });
 ```
-
-### Create an Agreement
-
-```typescript
-import { LigoAgreement, WithContext } from "@ligo/ts-vocab";
-```
