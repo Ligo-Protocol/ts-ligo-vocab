@@ -1,6 +1,7 @@
-import { Vehicle, Organization, Person, DateTime, Place } from "schema-dts";
+import { Organization, Person, DateTime, Place } from "schema-dts";
 import { IdReference, SchemaValue } from "./shared";
 import { PriceSpecification } from "./PriceSpecification";
+import { Car } from "./Car";
 
 export interface RentalCarReservation {
   /** The date and time the reservation was booked. */
@@ -10,7 +11,7 @@ export interface RentalCarReservation {
   /** The entity providing the rental. Same as seller of Offer */
   provider?: SchemaValue<Organization | Person | IdReference, "provider">;
   /** The vehicle being reserved. */
-  reservationFor?: SchemaValue<Vehicle, "reservationFor">;
+  reservationFor?: SchemaValue<Car, "reservationFor">;
   /**
    * The total price for the reservation or ticket, including applicable taxes, shipping, etc.
    *
