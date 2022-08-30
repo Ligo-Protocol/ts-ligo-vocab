@@ -1,6 +1,6 @@
 {
   "name": "@ligo/ts-vocab",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Typescript types for Ligo vocabulary",
   "license": "MIT",
   "main": "dist/index.js",
