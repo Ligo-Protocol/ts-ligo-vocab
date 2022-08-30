@@ -1,7 +1,6 @@
 import {
   Text,
   URL,
-  Vehicle,
   Organization,
   Person,
   GeoShape,
@@ -10,6 +9,7 @@ import {
 import { IdReference, SchemaValue } from "./shared";
 import { PriceSpecification } from "./PriceSpecification";
 import { LigoPaymentMethod } from "./LigoPaymentMethod";
+import { Car } from "./Car";
 
 export interface Offer {
   /** Description of the offer. */
@@ -17,7 +17,7 @@ export interface Offer {
   /** Image(s) of specific vehicle being offered. */
   image?: SchemaValue<URL, "image">;
   /** The vehicle being offered. */
-  itemOffered?: SchemaValue<Vehicle | IdReference, "itemOffered">;
+  itemOffered?: SchemaValue<Car | IdReference, "itemOffered">;
   /** The entity offering the rental. */
   seller?: SchemaValue<Organization | Person | IdReference, "seller">;
   /** The approximate area where the vehicle is available to pickup. Can be used to obfuscate the precise location. */

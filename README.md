@@ -26,10 +26,19 @@ const offer: WithContext<Offer> = {
   description: "This is a sample entry of JSON data for the schema",
   image: "https://image.com/img12.img",
   itemOffered: {
-    "@type": "Vehicle",
-    vehicleIdentificationNumber: "19749301501751",
-    vehicleModelDate: "2017",
-    model: "Tesla",
+    "@type": "Car",
+    modelDate: "2019",
+    vehicleIdentificationNumber: "5YJ3E1EA1KF064316",
+    manufacturer: {
+      "@type": "Organization",
+      legalName: "Tesla, Inc.",
+    },
+    brand: {
+      "@type": "Brand",
+      name: "Tesla",
+    },
+    model: "Model 3",
+    vehicleConfiguration: "Standard Range Plus",
   },
   seller: {
     "@type": "Person",
