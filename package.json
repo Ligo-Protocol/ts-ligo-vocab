@@ -7,7 +7,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "yarn clean && yarn build"
   },
   "dependencies": {
     "schema-dts": "^1.1.0"
