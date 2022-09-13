@@ -1,5 +1,5 @@
 {
-  "name": "@ligo/ts-vocab",
+  "name": "@ligoplatform/ts-vocab",
   "version": "0.1.0",
   "description": "Typescript types for Ligo vocabulary",
   "license": "MIT",
